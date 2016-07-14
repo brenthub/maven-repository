@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata modelVersion="1.1.0">
+  <groupId>cn.brent</groupId>
+  <artifactId>brent-parent</artifactId>
+  <version>1.0.2-SNAPSHOT</version>
+  <versioning>
+    <snapshot>
+      <timestamp>20160714.092104</timestamp>
+      <buildNumber>1</buildNumber>
+    </snapshot>
+    <lastUpdated>20160714092104</lastUpdated>
+    <snapshotVersions>
+      <snapshotVersion>
+        <extension>pom</extension>
+        <value>1.0.2-20160714.092104-1</value>
+        <updated>20160714092104</updated>
+      </snapshotVersion>
+    </snapshotVersions>
+  </versioning>
+</metadata>

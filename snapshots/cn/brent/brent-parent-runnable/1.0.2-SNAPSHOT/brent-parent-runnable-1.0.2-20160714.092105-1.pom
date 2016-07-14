@@ -1,0 +1,57 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>cn.brent</groupId>
+		<artifactId>brent-parent</artifactId>
+		<version>1.0.2-SNAPSHOT</version>
+	</parent>
+	<artifactId>brent-parent-runnable</artifactId>
+	<packaging>pom</packaging>
+	
+	<properties>
+		<!-- 项目跳过assembly,因为父项目不需要打成tar包，需要打成tar包的子项目必须将此属性关闭-->
+		<skipAssembly>true</skipAssembly>
+		<!-- 装配路径（有可执行脚本和打包用到的一些文件） -->
+		<assembly.path>D:\GitRep\brenthub\brent-parent\brent-parent-runnable</assembly.path>
+	</properties>
+	
+	<profiles>
+		<profile>
+			<id>produce</id>
+			<properties>
+				<profile.id>produce</profile.id>
+			</properties>
+		</profile>
+		<profile>
+			<id>test</id>
+			<properties>
+				<profile.id>test</profile.id>
+			</properties>
+		</profile>
+	</profiles>
+	
+	<build>
+
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<appendAssemblyId>false</appendAssemblyId>
+					<descriptors>
+						<descriptor>${assembly.path}/assembly.xml</descriptor>
+					</descriptors>
+				</configuration>
+				<executions>
+					<execution>
+						<id>package</id>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>
