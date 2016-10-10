@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>cn.brent</groupId>
+  <artifactId>brent-commons-lang</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20161010041851</lastUpdated>
+  </versioning>
+</metadata>
